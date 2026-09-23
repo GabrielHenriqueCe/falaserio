@@ -1,0 +1,11 @@
+# ferramentas locais de desenvolvimento
+.claude/
+.mcp.json
+node_modules/
+
+# documentos internos e dados de pesquisa — nao versionar
+*.pdf
+
+# arquivos temporarios
+_*.html
+.index.bak
