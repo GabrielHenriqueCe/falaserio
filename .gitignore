@@ -1,6 +1,7 @@
 # ferramentas locais de desenvolvimento
 .claude/
 .mcp.json
+CLAUDE.md
 node_modules/
 
 # documentos internos e dados de pesquisa — nao versionar
