@@ -87,13 +87,6 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
   aspect-ratio:9/10;max-width:100%}
 .hero__foto img{width:100%;height:100%;object-fit:cover}
 
-/* ===== espaço reservado para foto ===== */
-.slot{display:grid;place-items:center;text-align:center;background:var(--card);
-  border:2px dashed var(--line);border-radius:20px;padding:24px;color:var(--ink-2);gap:6px}
-.slot svg{width:30px;height:30px;fill:var(--line)}
-.slot b{font-family:var(--display);font-weight:700;font-size:.98rem;color:var(--ink);
-  font-variation-settings:'wdth' 94,'opsz' 16}
-.slot span{font-size:.82rem;line-height:1.45;max-width:30ch}
 
 /* ===== tiles ===== */
 .tiles{display:grid;gap:14px;margin-top:clamp(28px,3.5vw,40px)}
@@ -163,13 +156,6 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
 .plano li b{color:var(--ink);font-weight:600}
 .planos__pe{margin-top:20px;font-size:.86rem;color:var(--ink-2);max-width:70ch}
 
-/* ===== números do modelo ===== */
-.numeros{margin-top:clamp(28px,3.5vw,40px);display:grid;gap:18px}
-@media (min-width:700px){.numeros{grid-template-columns:repeat(3,1fr)}}
-.numero{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
-.numero b{display:block;font-family:var(--display);font-weight:700;font-size:2.3rem;
-  letter-spacing:-.035em;line-height:1;color:var(--brand);font-variation-settings:'wdth' 90,'opsz' 38}
-.numero span{display:block;margin-top:9px;font-size:.9rem;color:var(--ink-2)}
 
 /* ===== relatos ===== */
 .relatos__grid{margin-top:clamp(28px,3.5vw,40px);display:grid;gap:14px}
@@ -182,11 +168,12 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
 /* ===== o evento ===== */
 .evento{background:var(--lilas)}
 .evento__grid{margin-top:clamp(28px,3.5vw,42px);display:grid;gap:16px}
-@media (min-width:760px){.evento__grid{grid-template-columns:1.2fr .8fr}}
-.evento__trofeu{aspect-ratio:4/5;border-radius:24px;overflow:hidden}
+/* 3/2 é a proporção das fotos: corte mais estreito tira gente da foto do troféu */
+.evento__trofeu{aspect-ratio:3/2;border-radius:24px;overflow:hidden}
 .evento__trofeu img{width:100%;height:100%;object-fit:cover}
-.evento__equipe{display:grid;gap:16px;grid-template-rows:repeat(2,1fr)}
-.evento__equipe > *{aspect-ratio:16/10;border-radius:24px;overflow:hidden}
+.evento__equipe{display:grid;gap:16px}
+@media (min-width:760px){.evento__equipe{grid-template-columns:repeat(2,1fr)}}
+.evento__equipe > *{aspect-ratio:3/2;border-radius:24px;overflow:hidden}
 .evento__equipe img{width:100%;height:100%;object-fit:cover}
 
 /* ===== fechamento ===== */
@@ -359,12 +346,6 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
         </article>
       </div>
 
-      <div class="numeros">
-        <div class="numero"><b>54%</b><span>de margem de contribuição por assinante</span></div>
-        <div class="numero"><b>596</b><span>assinantes no ponto de equilíbrio</span></div>
-        <div class="numero"><b>R$ 5 mil</b><span>de capital para iniciar a operação</span></div>
-      </div>
-
       <p class="planos__pe">O plano Prioridade incluiria a <strong>prioridade no agendamento</strong>, nunca a consulta — que seria paga diretamente ao ginecologista. O Fala Sério não é plano de saúde. A remuneração da enfermeira seria por atendimento, e a relação com o médico seria de troca, nunca de comissão por paciente encaminhado.</p>
     </div>
   </section>
@@ -379,7 +360,7 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
       <blockquote class="relato"><p>“Eu já procurei ginecologista, mas é aparentemente normal.”</p></blockquote>
       <blockquote class="relato"><p>“As pessoas acham que isso é uma manha, uma frescura.”</p></blockquote>
     </div>
-    <p class="relatos__pe">Falas reproduzidas sem identificação. As fotos desta página são ilustrativas e não retratam as pessoas entrevistadas.</p>
+    <p class="relatos__pe">Falas reproduzidas sem identificação. Fora as do evento, as fotos desta página são ilustrativas e não retratam as pessoas entrevistadas.</p>
   </section>
 
   <!-- O EVENTO -->
@@ -390,28 +371,11 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
 
       <div class="evento__grid">
 
-        <!-- TROFÉU — troque a div abaixo por:
-             <figure class="evento__trofeu"><img src="img/trofeu.jpg" alt="Equipe com o troféu de terceiro lugar"></figure> -->
-        <div class="slot evento__trofeu">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 9.2 8.6 2 9.2l5.5 4.8L5.8 21 12 17.3 18.2 21l-1.7-7 5.5-4.8-7.2-.6z"/></svg>
-          <b>Foto do troféu</b>
-          <span>img/trofeu.jpg</span>
-        </div>
+        <figure class="evento__trofeu"><img src="img/trofeu.jpg" alt="Equipe com o troféu de terceiro lugar" width="1600" height="1066" loading="lazy"></figure>
 
         <div class="evento__equipe">
-          <!-- EQUIPE 1 — troque por: <figure><img src="img/equipe-1.jpg" alt="Equipe do Fala Sério"></figure> -->
-          <div class="slot">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 2c-2.7 0-8 1.3-8 4v2h9v-2c0-1 .4-2.7 2.2-3.8-1.1-.2-2.3-.2-3.2-.2zm8 0c-.3 0-.7 0-1.1.1C16.2 14.2 17 15.7 17 17v2h7v-2c0-2.7-5.3-4-8-4z"/></svg>
-            <b>Foto da equipe</b>
-            <span>img/equipe-1.jpg</span>
-          </div>
-
-          <!-- EQUIPE 2 — troque por: <figure><img src="img/equipe-2.jpg" alt="Apresentação do pitch"></figure> -->
-          <div class="slot">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14a4 4 0 0 0 4-4V5a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4zm5-4a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-4.1A7 7 0 0 0 19 10h-2z"/></svg>
-            <b>Foto do pitch</b>
-            <span>img/equipe-2.jpg</span>
-          </div>
+          <figure><img src="img/equipe-1.jpg" alt="Equipe do Fala Sério" width="1000" height="666" loading="lazy"></figure>
+          <figure><img src="img/equipe-2.jpg" alt="Apresentação do pitch" width="1000" height="666" loading="lazy"></figure>
         </div>
 
       </div>
@@ -445,6 +409,6 @@ h3{font-size:1.15rem;letter-spacing:-.018em;line-height:1.2}
   </div>
 </footer>
 
-<!-- Fotos ilustrativas: Unsplash, licença livre para uso comercial. Não retratam pacientes. -->
+<!-- Fotos ilustrativas: Unsplash, licença livre para uso comercial. Não retratam pacientes. Fotos do evento: da equipe. -->
 </body>
 </html>

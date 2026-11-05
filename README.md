@@ -51,6 +51,6 @@ O projeto **não está em operação**. Não há formulário, backend ou canal d
 
 ## Licença
 
-Código sob licença MIT. As fotografias vêm do [Unsplash](https://unsplash.com) sob licença livre e são ilustrativas — não retratam pacientes nem as pessoas entrevistadas.
+Código sob licença MIT. As fotografias do evento são da equipe. As demais vêm do [Unsplash](https://unsplash.com) sob licença livre e são ilustrativas — não retratam pacientes nem as pessoas entrevistadas.
 
 As falas citadas são trechos de entrevistas da pesquisa, reproduzidas sem identificação.
